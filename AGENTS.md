@@ -7,7 +7,7 @@ This is a **documentation-only** repository (an "awesome list" of curated links)
 ### Services & tools
 
 | Tool | Purpose | Command |
-|---|---|---|
+| --- | --- | --- |
 | `markdownlint-cli2` | Lint Markdown formatting | `markdownlint-cli2 "**/*.md"` |
 | `lychee` | Check for dead links | `lychee --config .lychee.toml --no-progress './**/*.md'` |
 
@@ -19,7 +19,7 @@ Run from the repo root:
 markdownlint-cli2 "**/*.md"
 ```
 
-Config lives in `.markdownlint.yml`. The root-level `*.md` files should pass cleanly; `docs/` files have pre-existing violations.
+Config lives in `.markdownlint.yml`. All Markdown files in this repository should pass lint cleanly.
 
 ### Link check
 
@@ -35,6 +35,6 @@ The GitHub Actions workflow (`.github/workflows/ci.yml`) runs both tools above o
 
 ### Gotchas
 
-- `lychee` exit code 2 means link errors were found (pre-existing). Exit code 0 means all links are valid.
-- `markdownlint-cli2` exit code 1 means lint errors were found. All lint errors in the current repo are in `docs/` — the root-level README files pass cleanly.
+- `lychee` exits with a non-zero status when link errors are found; exit code 0 means all links are valid. Some external URLs may fail intermittently (rate limits, 503s).
+- `markdownlint-cli2` exit code 1 means lint errors were found.
 - There is no `package.json` or lockfile in this repo. `markdownlint-cli2` is installed globally via npm, and `lychee` is a standalone binary.
