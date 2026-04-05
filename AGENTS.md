@@ -7,7 +7,7 @@ This is a **documentation-only** repository (an "awesome list" of curated links)
 ### Services & tools
 
 | Tool | Purpose | Command |
-|---|---|---|
+| --- | --- | --- |
 | `markdownlint-cli2` | Lint Markdown formatting | `markdownlint-cli2 "**/*.md"` |
 | `lychee` | Check for dead links | `lychee --config .lychee.toml --no-progress './**/*.md'` |
 
